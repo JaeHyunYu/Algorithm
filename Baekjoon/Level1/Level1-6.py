@@ -90,6 +90,69 @@ for i,r in range(len(s)):
         
 
 '''
+
+import sys
+
+s=sys.stdin.readline()
+count=0
+incount=0
+s=s.upper()
+s=list(s)
+board = [[0] * 2 for i in range(26)]
+
+'''
+for i in range(len(s)):
+    if(ord(s[i])>=97):
+        s[i]=chr(int(ord(s[i])-32))
+
+        ==upper과 같은 역할
+'''
+s.sort()
+s.reverse()
+
+i=0
+while(i<len(s)):
+     for j in range(i,len(s)):
+        if(s[i]==s[j]):
+            count=count+1
+            continue
+        else:
+            i=j-1
+            board[incount][0]=i
+            board[incount][1]=count
+            incount=incount+1
+            count=0
+            break
+     i=i+1
+
+count=0
+flag=0
+
+max=board[0][1]
+
+for i in range(incount):
+    if(max<=board[i][1]):
+        max=board[i][1]
+    else:
+        continue
+
+for i in range(incount):
+    if(max<=board[i][1]):
+        count=count+1
+        flag=i
+    else:
+        continue
+
+if(count>1):
+    print("?")
+else:
+    print(s[board[flag][0]])
+
+
+
+---
+
+
 for i in range(len(s)):
     for j in range(i+1,len(s)):
         if(s[i]==s[j]):
@@ -108,4 +171,5 @@ if(count==1):
     print(s[flag])
 else:
     print("?")
+
 '''
