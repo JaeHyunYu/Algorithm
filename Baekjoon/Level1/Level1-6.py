@@ -48,7 +48,6 @@ else:
     print(0)
 
 ---
-'''
 
 
 import sys
@@ -171,5 +170,15 @@ if(count==1):
     print(s[flag])
 else:
     print("?")
+
+    ---
+
+    a=["c=","c-","dz=","d-","lj","nj","s=","z="]
+s=input()
+for i in range(len(a)):
+    s=s.replace(a[i],"*")
+print(len(s))
+
+---
 
 '''
