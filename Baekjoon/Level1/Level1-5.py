@@ -64,9 +64,21 @@ total=0
 
 for i in range(len(s)):
     num=int((ord(s[i])-ord("A"))/3)+3
-    if(ord(s[i])>=ord("S"))):
-        tmp=s[i]-
+    if(ord(s[i])>=ord("S")):
+        num=int((ord(s[i])-1-ord("A"))/3)+3
+      
+    if(ord(s[i])>=ord("Z")):
+        num=int((ord(s[i])-2-ord("A"))/3)+3
+      
     total=total+num
 
 print(total)
-#진행중
+
+---
+
+while(1):
+    try:
+        a=input()
+        print(a)
+    except:
+        break
