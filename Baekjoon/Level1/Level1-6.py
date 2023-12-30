@@ -207,4 +207,44 @@ for j in range(n):
 
     
 print(n-count)
+
+
+---
+
+def cal(param1):
+    if(param1=='A+'):
+        return float(4.5)
+    elif(param1=='A0'):
+        return float(4.0)
+    elif(param1=='B+'):
+        return float(3.5)
+    elif(param1=='B0'):
+        return float(3.0)
+    elif(param1=='C+'):
+        return float(2.5)
+    elif(param1=='C0'):
+        return float(2.0)        
+    elif(param1=='D+'):
+        return float(1.5)
+    elif(param1=='D0'):
+        return float(1.0)
+    else:
+        return 0
+
+
+
+credit=0
+grade=0
+
+for i in range(20):
+    s=input().split()
+    if(s[2]=='P'):
+        continue
+    else:
+        credit=credit+float(s[1])
+        grade=grade+float(s[1])*cal(s[2])
+        
+
+print(round(grade/credit,6))
+
 '''
