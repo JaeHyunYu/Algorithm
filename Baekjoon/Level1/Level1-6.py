@@ -58,13 +58,13 @@ s=s.upper()
 s=list(s)
 d=[]
 
-'''
-for i in range(len(s)):
-    if(ord(s[i])>=97):
-        s[i]=chr(int(ord(s[i])-32))
 
-        ==upper과 같은 역할
-'''
+#for i in range(len(s)):
+#    if(ord(s[i])>=97):
+#        s[i]=chr(int(ord(s[i])-32))
+
+#        ==upper과 같은 역할
+
 
 
 s.sort()
@@ -88,7 +88,6 @@ for i,r in range(len(s)):
             
         
 
-'''
 
 import sys
 
@@ -99,13 +98,13 @@ s=s.upper()
 s=list(s)
 board = [[0] * 2 for i in range(26)]
 
-'''
-for i in range(len(s)):
-    if(ord(s[i])>=97):
-        s[i]=chr(int(ord(s[i])-32))
 
-        ==upper과 같은 역할
-'''
+#for i in range(len(s)):
+ #   if(ord(s[i])>=97):
+ #       s[i]=chr(int(ord(s[i])-32))
+
+ #       ==upper과 같은 역할
+
 s.sort()
 s.reverse()
 
@@ -181,4 +180,31 @@ print(len(s))
 
 ---
 
+n=int(input())
+count=0
+
+
+for j in range(n):
+    s=input()
+    s=list(s)
+    a=list(set(s))
+
+    for i in range(len(a)):
+        flag=0
+        num=s.count(a[i])
+        locate=s.index(a[i])
+        for k in range(num):
+            if(s[locate]!=s[locate+k]):
+                count=count+1
+                flag=1
+                break
+            else:
+                continue
+        if(flag==1):
+            break
+        else:
+            continue
+
+    
+print(n-count)
 '''
