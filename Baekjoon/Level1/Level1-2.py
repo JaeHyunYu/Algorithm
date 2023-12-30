@@ -1,4 +1,10 @@
+Site:https://www.acmicpc.net/step/4
+조건문
+
 '''
+1. 두 수 비교하기(1330)
+두 수를 비교한 결과를 출력하는 문제
+
 a,b=map(int,input().split())
 
 if(a>b):
@@ -8,6 +14,9 @@ elif(a<b):
 else: print("==")
 
 ---
+2. 시험 성적(9498)
+시험 점수를 성적으로 바꾸는 문제
+
 a=int(input())
 if(a>=90):
     print("A")
@@ -21,6 +30,9 @@ else:
     print("F")
 
 ---
+3. 윤년 (2753)
+윤년을 판별하는 문제
+
 a=int(input())
 if((a%4==0) & (a%100!=0)):
     print(1)
@@ -30,6 +42,8 @@ else:
     print(0)
 
 ---
+4. 사분면 고르기(14681)
+점이 어느 사분면에 있는지 알아내는 문제
 
 a=int(input())
 b=int(input())
@@ -43,6 +57,8 @@ else:
     print(2)
 
 ---
+5. 알람 시계(2884)
+시간 계산 문제
 
 a,b=map(int,input().split())
 if(b>=45):
@@ -57,6 +73,9 @@ else:
 print(a,b)
 
 ---
+6. 오븐 시계(2525)
+범위가 더 넓은 시간 계산 문제
+
 a,b=map(int,input().split())
 c=int(input())
 fin_hour=0
@@ -77,7 +96,10 @@ else:
 
 print(fin_hour,fin_min)
 
-'''
+---
+7. 주사위 세개(2480)
+조건에 따라 상금을 계산하는 문제
+
 a=[1,2,3]
 
 a[0],a[1],a[2]=map(int,input().split())
@@ -99,3 +121,4 @@ else:
             d=i
     print(d*100)
     
+'''
