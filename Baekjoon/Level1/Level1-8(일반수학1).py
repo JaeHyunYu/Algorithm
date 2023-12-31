@@ -159,20 +159,49 @@ while(1):
 분수의 순서에서 규칙을 찾는 문제
 
 푸는중
-대각선 피보나치 형식으로 풀면될 거 같음
 def findnum(param):
     i=1
     total=0
     while(1):
-        if(total>param):
+        for k in range(1,i+1):
+           total=total+k
+        if(param<=total):
             break
-        for k in range()
-        
         i=i+1
+        total=0
+    return i,total-i+1
         
 
 n=int(input())
 
+a,b=findnum(n)
+# a=가로로 몇번째에있는지, b=그 숫자가 무엇인지
+
+distance=n-b
+
+print(a,b)
+
+
+for i in range(1,distance+1):
+    if(i<=int(n/2)):
+        denominator=d
+        
+        
+    
+#절반을 기준으로 봐야함
+if(distance>int(n/2)):
+    molecule=1+distance
+    #분자
+    denominator=a-distance
+    #분모
+else:
+    molecule=1+distance
+    #분자
+    denominator=a-distance
+    #분모
+print(molecule,"/",denominator,sep="")
+
+    
 
 
 ---
