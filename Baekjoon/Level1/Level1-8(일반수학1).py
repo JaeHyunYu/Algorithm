@@ -158,6 +158,22 @@ while(1):
 6.분수찾기(1193)
 분수의 순서에서 규칙을 찾는 문제
 
+푸는중
+대각선 피보나치 형식으로 풀면될 거 같음
+def findnum(param):
+    i=1
+    total=0
+    while(1):
+        if(total>param):
+            break
+        for k in range()
+        
+        i=i+1
+        
+
+n=int(input())
+
+
 
 ---
 7.달팽이는 올라가고 싶다(2869)
