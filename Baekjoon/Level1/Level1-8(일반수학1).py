@@ -141,6 +141,18 @@ print(int(math.pow(a+1,2)))
 5.벌집(2292)
 벌집이 형성되는 규칙에 따라 벌집의 위치를 구하는 문제
 
+n=int(input())
+
+total=1
+i=1
+while(1):
+    if(n<=total):
+        print(i)
+        break
+    total=total+i*6
+    i=i+1
+
+# 한바퀴가 증가할 수록 6의 배수 형식으로 갯수가 늘어남(규칙성)
 
 ---
 6.분수찾기(1193)
