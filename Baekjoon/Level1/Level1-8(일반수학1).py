@@ -31,6 +31,69 @@ print(int(dec))
 2. 진법 변환2(11005)
 반대 방향으로 진법을 변환하는 문제
 
+import math
+
+def becomenum(param):
+    return (ord(param)-55)
+
+def becomealpha(param):
+    return (chr(param+55))
+    
+def findnum(param,param2):
+    i=0
+    while(1):
+        if(math.pow(param2,i)>param):
+           break
+        i=i+1
+    location = i-1
+    num=int(param/math.pow(param2,location))
+    return num,location
+
+
+n,b=map(int,input().split())
+
+
+i,j=findnum(n,b)
+arr=[0 for i in range(j+1)]
+
+while(1):
+    if(n==0):
+        break
+    v1,v2=findnum(n,b)
+    arr[(v2)]=v1
+    n=n-v1*math.pow(b,v2)
+
+for i in range(len(arr)):
+    if(arr[i]>=10):
+        arr[i]=becomealpha(arr[i])
+
+arr.reverse()
+
+if not arr:
+    print(0)
+else:
+    print(*arr,sep="")
+
+
+# 사람이 푸는 방식으로 푼 방식
+# 제곱근 중 가장 큰 값을 계속해서 빼는 식으로 구함.
+
+#a,b=map(int,input().split())
+#
+#print(a,b)
+#
+#while(1):
+#    if(a==0):
+#        break
+#    print(int(a%b))
+#    a=int(a/b)
+#
+# 이런 식으로 풀면 엄청 빨리 풀 수 있었음.. 나머지를 계속해서 구하는 방식
+
+
+
+
+
 
 ---
 3. 세탁소 사장 동혁(2720)
