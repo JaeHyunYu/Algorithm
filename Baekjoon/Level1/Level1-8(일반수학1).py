@@ -98,7 +98,31 @@ else:
 ---
 3. 세탁소 사장 동혁(2720)
 💰
+def cal(b,a):
+    return int(a/b),(a-b*int(a/b))
 
+def ref(param):
+    a=b=c=d=0
+    if(param>=25):
+        a,param=cal(25,param)
+    if(param>=10):
+        b,param=cal(10,param)
+    if(param>=5):
+        c,param=cal(5,param)
+    if(param>=1):
+        d,param=cal(1,param)
+    return a,b,c,d
+
+
+n=int(input())
+
+for i in range(n):
+    a=int(input())
+    print(*ref(a))
+
+# 소수점으로 계산 진행 시, 오차발생
+# 컴퓨터는 숫자를 2진수로 받아들이기 때문에 오류가 발생. -> 무한반복되는 근사값으로 값을 저장하기 때문에 오차발생
+# 소수점으로 계산하고 싶으면 모듈 응용하면됨(decimal)
 
 ---
 4.중앙 이동 알고리즘(2903)
