@@ -128,6 +128,13 @@ for i in range(n):
 4.중앙 이동 알고리즘(2903)
 둘씩 반복해서 나눴을 때 점의 개수를 세는 문제
 
+import math
+n=int(input())
+
+a=int(math.pow(2,(n)))
+print(int(math.pow(a+1,2)))
+
+#한 변을 기준으로 갯수 카운트
 
 
 ---
