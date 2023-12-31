@@ -5,7 +5,27 @@ Site : https://www.acmicpc.net/step/8
 1. 진법 변환(2745)
 진법에 대해 배우는 문제
 
+import math
 
+def becomenum(param):
+    return (ord(param)-55)
+
+n,b=input().split()
+dec=0
+
+b=int(b)
+n=list(n)
+n.reverse()
+
+for i in range(len(n)):
+    if(n[i].isalpha()):
+        tmp=becomenum(n[i])
+    else:
+        tmp=int(n[i])
+
+    dec=dec+tmp*math.pow(b,i)
+
+print(int(dec))
 
 ---
 2. 진법 변환2(11005)
