@@ -74,12 +74,9 @@ for i in range(mn):
 4. 색종이(2563)
 2차원 배열을 활용하여 색종이로 평면을 덮는 문제
 
-푸는중
-
-
 n=int(input())
 total=[[1 for j in range(100)] for i in range(100)]
-
+count=0
 arr=[]
 for i in range(n):
     arr.append(list(map(int,input().split())))
@@ -87,13 +84,16 @@ for i in range(n):
 for i in range(n):
     numa=int(arr[i][0])
     numb=int(arr[i][1])
-    for j in range((numa-1),(numa+10)):
-        for k in range((numb-1),(numb+10)):
+    for j in range((numa-1),(numa+9)):
+        for k in range((numb-1),(numb+9)):
             total[j][k]=0
             
+            
 
+for i in range(100):
+    count=count+total[i].count(0)
 
-print(total.count(0))
+print(count)
 
 
 
