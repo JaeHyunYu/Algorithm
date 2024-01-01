@@ -158,7 +158,7 @@ while(1):
 6.분수찾기(1193)
 분수의 순서에서 규칙을 찾는 문제
 
-푸는중
+import math
 def findnum(param):
     i=1
     total=0
@@ -171,36 +171,32 @@ def findnum(param):
         total=0
     return i,total-i+1
         
-
 n=int(input())
 
 a,b=findnum(n)
 # a=가로로 몇번째에있는지, b=그 숫자가 무엇인지
 
-distance=n-b
+distance=n-b+1
+#distance = 그 라인에서 몇번째에 위치하고 있는지(1부터 시작)
 
-print(a,b)
+mid=math.ceil(a/2)
+# 그라인의 가운데 숫자
+#print(a,b,distance,mid)
+
+molecule=1
+denominator=a
+
+for i in range(1,distance):
+        molecule=molecule+1
+        #분자
+        denominator=denominator-1
+        #분모
 
 
-for i in range(1,distance+1):
-    if(i<=int(n/2)):
-        denominator=d
-        
-        
-    
-#절반을 기준으로 봐야함
-if(distance>int(n/2)):
-    molecule=1+distance
-    #분자
-    denominator=a-distance
-    #분모
+if((a%2==0)):
+    print(molecule,"/",denominator,sep="")
 else:
-    molecule=1+distance
-    #분자
-    denominator=a-distance
-    #분모
-print(molecule,"/",denominator,sep="")
-
+    print(denominator,"/",molecule,sep="")
     
 
 
