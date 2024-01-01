@@ -204,6 +204,22 @@ else:
 7.달팽이는 올라가고 싶다(2869)
 달팽이의 움직임을 계산하는 문제
 
+푸는중
+a,b,v=map(int,input().split())
+
+date=1
+total=0
+while(1):
+    total=total+a
+    if(total>=v):
+        break
+    total=total-b
+    date=date+1
+
+print(date)
+
+#while문 사용시 시간초과 -> 반복문 사용안하고 풀기
+
 
 ---
 
