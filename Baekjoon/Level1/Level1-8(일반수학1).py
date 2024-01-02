@@ -220,6 +220,20 @@ print(date)
 
 #while문 사용시 시간초과 -> 반복문 사용안하고 풀기
 
+a,b,v=map(int,input().split())
+
+
+#하루동안 가는 거리(a-b)
+#x일동안 간다고 치면 a*x-(b(x-1))=V
+#바로 올라갈경우 
+#하루 뒤에 올라갈 경우 +1 
+
+x=(v-b)/(a-b)
+
+if((v-b)%(a-b)==0):
+    print(int(x))
+else:
+    print(int(x)+1)
 
 ---
 
