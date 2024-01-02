@@ -43,6 +43,30 @@ else:
 3.약수들의 합(9506)
 약수를 구하면서 주어진 수가 완전수인지 판별하는 문제
 
+while(1):
+    n=int(input())
+    if(n==(-1)):
+        break
+    total=0
+    i=1
+    arr=[]
+    while(1):
+        if(i==n):
+            break
+        if(n%i==0):
+            total=total+i
+            arr.append(i)
+        i=i+1
+
+    if(sum(arr)==n):
+        print(n,"=",end=" ")
+        for k in range(len(arr)):
+            if(k==(len(arr)-1)):
+                print(arr[k])
+            else:
+                print(arr[k],"+ ",end="")
+    else:
+        print(n,"is NOT perfect.")
 
 ---
 4.소수 찾기(1978)
