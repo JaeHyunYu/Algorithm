@@ -20,7 +20,23 @@ while(1):
 
 2.약수 구하기(2501)
 주어진 수의 약수를 구하는 문제
+n,k=map(int,input().split())
+count=0
+i=0
 
+while(1):
+    if(count==k):
+        break
+    if(i==n):
+        break
+    i=i+1
+    if(n%i==0):
+        count=count+1
+
+if(count==k):
+    print(i)
+else:
+    print(0)
 
 ---
 
