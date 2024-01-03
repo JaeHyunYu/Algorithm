@@ -72,12 +72,63 @@ while(1):
 4.소수 찾기(1978)
 2부터 X-1까지 모두 나눠서 X가 소수인지 판별하는 문제 1
 
+n=int(input())
+arr=map(int,input().split())
+num=0
+arr=list(arr)
+for i in range(n):
+    count=0
+    for k in range(1,int(arr[i])+1):
+        if(arr[i]%k==0):
+            count=count+1
+    if(count==2):
+        num=num+1
+print(num)
+
 
 ---
 5.소수(2581)
 2부터 X-1까지 모두 나눠서 X가 소수인지 판별하는 문제 2
 
+def prime(param):
+    count=0
+    for i in range(1,param+1):
+        if(param%i==0):
+            count=count+1
+    if(count==2):
+        return 1
+    else:
+        return 0
+
+n=int(input())
+m=int(input())
+
+arr=[]
+
+for i in range(n,m+1):
+    if(prime(i)):
+        arr.append(i)
+
+if not arr:
+    print(-1)
+else:
+    print(sum(arr))
+    print(arr[0])
+
 
 ---
 6.소인수분해(11653)
 N을 소인수분해하는 문제
+
+n=int(input())
+i=2
+while(1):
+    if(n==1):
+        break
+    if(n%i==0):
+        n=int(n/i)
+        print(i)
+        continue
+    else:
+        i=i+1
+        
