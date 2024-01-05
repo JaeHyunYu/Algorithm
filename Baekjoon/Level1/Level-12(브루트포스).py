@@ -27,6 +27,16 @@ print(max(arr2))
 2. 분해합(2231)
 모든 경우를 시도하여 N의 생성자를 구하는 문제
 
+n=int(input())
+
+
+for i in range(1,n+1):
+    total=i+sum(map(int,str(i)))
+    if(total==n):
+        print(i)
+        break
+if(i==n):
+    print(0)
 
 
 
