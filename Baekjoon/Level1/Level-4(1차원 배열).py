@@ -1,5 +1,9 @@
-'''
+Site: https://www.acmicpc.net/step/6
+1차원 배열
 
+'''
+1. 개수 세기(10807)
+배열을 입력받고 v를 찾는 문제
 
 n=int(input())
 arr=list(map(int,input().split()))
@@ -11,6 +15,9 @@ for i in range(n):
         count=count+1
 print(count)
 ---
+2. X보다 작은 수(10871)
+배열을 입력받고 X보다 작은 수를 찾는 문제
+
 a,b=map(int,input().split())
 arr=list(map(int,input().split()))
 ans=[]
@@ -23,6 +30,8 @@ for i in range(a):
 print(*ans)
 
 ---
+3.최소, 최대(10818)
+최솟값과 최댓값을 찾는 문제
 
 n=int(input())
 
@@ -39,6 +48,8 @@ for i in range(n):
 print(min,max)
 
 ---
+4. 	최댓값(2562)
+최댓값이 어디에 있는지 찾는 문제
 
 arr=[]
 
@@ -57,6 +68,8 @@ print(max)
 print(num+1)
 
 ---
+5. 공 넣기(10810)
+배열에 값을 쓰는 문제
 
 n,m=map(int,input().split())
 arr=[0 for i in range(n)]
@@ -69,6 +82,9 @@ for i in range(m):
 print(*arr)
 
 ----
+6. 공 바꾸기(10813)
+배열의 값을 교환하는 문제
+
 n,m=map(int,input().split())
 
 arr=[]
@@ -84,7 +100,8 @@ for i in range(m):
 
 print(*arr)
 ---
-
+7. 과제 안 내신 분..?(5597)
+과제 제출 기한이 지났습니다.
 
 arr=[]
 
@@ -98,6 +115,8 @@ for i in range(28):
 print(*arr)
 
 ----
+8. 나머지(3052) 
+배열을 활용하여 서로 다른 값의 개수를 찾는 문제
 
 arr=[0 for i in range(10)]
 
@@ -120,6 +139,8 @@ for i in range(10):
 print(count)
 
 ---
+9. 바구니 뒤집기(10811)
+배열을 뒤집는 문제
 
 import copy
 
@@ -140,6 +161,8 @@ for i in range(m):
 print(*arr)
 
 ---
+10. 평균(1546)
+평균을 조작하는 문제
 
 n=int(input())
 
