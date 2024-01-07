@@ -1,6 +1,7 @@
+
+'''
 Site:https://www.acmicpc.net/step/22
 브루트 포스
-'''
 ---
 1. 블랙잭(2798)
 세 장의 카드를 고르는 모든 경우를 고려하는 문제
@@ -56,11 +57,45 @@ if(i==n):
 5. 영화감독 숌(1436)
 N번째 종말의 수가 나올 때까지 차례대로 시도하는 문제
 
+n=int(input())
+cnt=0
+i=1
+while(1):
+    if(cnt==n):
+        print(i)
+        break
+    i=i+1
+    if '666' in str(i):
+        cnt=cnt+1
+    else:
+        continue
+
+
 
 
 ---
 6. 설탕 배달(2839)
 한때는 이 문제가 "기본 수학 1" 단계에 있었지만, 사실 브루트 포스로 푸는 게 더 쉽습니다.
 
+n=int(input())
+
+#5x+3y=n
+flag=0
+x=int(n/5)
+
+
+for i in range(x,-1,-1):
+    if((n-5*i)%3==0):
+        print(i+int((n-5*i)/3))
+        flag=1
+        break
+
+if(flag==0):
+    print(-1)
+
 
 '''
+
+
+
+
