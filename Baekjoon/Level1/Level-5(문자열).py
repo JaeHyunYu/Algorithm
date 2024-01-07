@@ -30,7 +30,20 @@ for i in range(n):
 
 ---
 
+5. 숫자의 합 (11720)
+정수를 문자열로 입력받는 문제. Python처럼 정수 크기에 제한이 없다면 상관 없으나, 예제 3은 일반적인 정수 자료형에 담기에 너무 크다는 점에 주목합시다.
 
+
+s=input()
+total=0
+
+
+for i in range(len(s)):
+    total=total+(int((ord(s[i])-ord("A"))/3)+3)
+
+print(total)
+
+---
 7. 문자열 반복(2675)
 데이터는 결국 0과 1일 텐데 문자를 어떻게 만드는 걸까요? 아스키 코드에 대해 알아봅시다.
 
@@ -64,18 +77,6 @@ m=(int(m/100)+int(int(m/10)%10)*10+(m%10)*100)
 
 print(max(n,m))
 
----
-7. 문자열 반복(2675)
-각 문자를 반복하여 출력하는 문제
-
-s=input()
-total=0
-
-
-for i in range(len(s)):
-    total=total+(int((ord(s[i])-ord("A"))/3)+3)
-
-print(total)
 
 ---
 10. 다이얼(5622)
