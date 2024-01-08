@@ -62,7 +62,44 @@ else:
 4. 체스판 다시 칠하기 (1018)
 체스판을 만드는 모든 경우를 시도하여 최적의 방법을 찾는 문제
 
+푸는중
+n,m=map(int,input().split())
+arr=[]
 
+def wb()
+
+for i in range(n):
+    arr.append(input())
+
+char WB[8][8] = {
+        "WBWBWBWB",
+        "BWBWBWBW",
+        "WBWBWBWB",
+        "BWBWBWBW",
+        "WBWBWBWB",
+        "BWBWBWBW",
+        "WBWBWBWB",
+        "BWBWBWBW"
+};
+
+char BW[8][8] = {
+        "BWBWBWBW",
+        "WBWBWBWB",
+        "BWBWBWBW",
+        "WBWBWBWB",
+        "BWBWBWBW",
+        "WBWBWBWB",
+        "BWBWBWBW",
+        "WBWBWBWB"
+};
+
+count=0
+
+for i in range(n-7):
+    for k in range(m-7):
+        if(arr[i][k])
+        
+print(arr[0][1])
 
 ---
 5. 영화감독 숌(1436)
