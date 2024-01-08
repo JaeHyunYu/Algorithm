@@ -45,6 +45,17 @@ if(i==n):
 3. 수학은 비대면강의입니다(19532)
 모든 x와 모든 y를 시도하여 해를 구하는 문제
 
+a,b,c,d,e,f=map(int,input().split())
+
+if((a==0) & (b==0)):
+    print(0,int(c/b))
+elif((b==0)&(e==0)):
+    print(int(c/a),0)
+else:
+    x=int((c*e-f*b)/(a*e-d*b))
+    y=int((c*d-a*f)/(b*d-a*e))
+    print(x,y)
+
 
 
 ---
