@@ -1,3 +1,6 @@
+Site : https://www.acmicpc.net/problem/13460
+구슬 탈출 2 bfs활용문제
+
 from collections import deque
 import sys
 input = sys.stdin.readline # 빠른 입출력 위한 코드
