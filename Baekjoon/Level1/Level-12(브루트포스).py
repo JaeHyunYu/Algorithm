@@ -45,12 +45,73 @@ if(i==n):
 3. 수학은 비대면강의입니다(19532)
 모든 x와 모든 y를 시도하여 해를 구하는 문제
 
+a,b,c,d,e,f=map(int,input().split())
+
+if((a==0) & (b==0)):
+    print(0,int(c/b))
+elif((b==0)&(e==0)):
+    print(int(c/a),0)
+else:
+    x=int((c*e-f*b)/(a*e-d*b))
+    y=int((c*d-a*f)/(b*d-a*e))
+    print(x,y)
+
 
 
 ---
 4. 체스판 다시 칠하기 (1018)
 체스판을 만드는 모든 경우를 시도하여 최적의 방법을 찾는 문제
 
+n,m=map(int,input().split())
+
+arr=[]
+
+for i in range(n):
+    arr.append(input())
+
+WB= [
+        "WBWBWBWB",
+        "BWBWBWBW",
+        "WBWBWBWB",
+        "BWBWBWBW",
+        "WBWBWBWB",
+        "BWBWBWBW",
+        "WBWBWBWB",
+        "BWBWBWBW"
+]
+
+BW=[
+        "BWBWBWBW",
+        "WBWBWBWB",
+        "BWBWBWBW",
+        "WBWBWBWB",
+        "BWBWBWBW",
+        "WBWBWBWB",
+        "BWBWBWBW",
+        "WBWBWBWB"]
+
+def chkwb(x,y):
+    count=0
+    count2=0
+    for i in range(8):
+        for j in range(8):
+            if(arr[x+i][y+j]!=WB[i][j]):
+                count=count+1
+    for i in range(8):
+        for j in range(8):
+            if(arr[x+i][y+j]!=BW[i][j]):
+                count2=count2+1
+    return min(count,count2)
+
+
+minv=chkwb(0,0)
+
+for i in range(n-7):
+    for k in range(m-7):
+        if(minv>chkwb(i,k)):
+            minv=chkwb(i,k)
+  
+print(minv)
 
 
 ---
